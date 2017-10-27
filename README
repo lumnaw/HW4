@@ -1,9 +1,24 @@
-- add/edit code after you check if it runs
 
 //TODO
-- implement SelfGrid & AttackGrid (Clicking on grid & attack grid should check enemy ship position)
-- toggle playerscreen using State design pattern
-- PlayerData class
-- implement paintComponent
-- add "STATUS" under player screen. # of own ships, # of own ships sunk, # of enemy ships sunk, current state, Game Over
-- determine result when player attack (decide where to implement this)
+1).The grids need to handle the clicks. The attack grid should check the opponent’s ship positions 
+(Beware: breaking encapsulation is not permissible. Think about how you can enhance the attackgrid/playerscreen class to do this).
+
+2).There are a lot of state transitions in this game. Use the State Design Pattern discussed in class to implement this. 
+Where should this reside? New class? BattleShip? This state pattern should handle the toggling of the player screens
+
+3).The data for displaying on the grid needs to be maintained somewhere (where?). For simplicity, 
+you may choose to do this in a 2D array in PlayerScreen. (Remember you will need 2 2D arrays - 1 for own and 1 for attack)  
+Ideally create a separate class for PlayerData and use that to check/update the cells. 
+(Model-View approach discussed in class). See #5 for additional data that this class can track.
+
+4).Modify the cell’s paintComponent to set the color based on the underlying data. 
+This would automatically maintain the visual state as you resize or toggle the visibility.
+
+5).Add a status region to the SOUTH of PlayerScreen to show the following. Use the hint in #3 to drive this display.
+Number of own ships:
+Number of own ships sunk:
+Number of enemy ships sunk:
+Current state (Can be one of player1 setup, player2 setup, player1 attack, player2 attack, Game over (result) )
+
+6).When a player attacks, you will need to determine the result. Decide which is the most appropriate place for doing so. 
+
