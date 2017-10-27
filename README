@@ -1,0 +1,9 @@
+- add/edit code after you check if it runs
+
+//TODO
+- implement SelfGrid & AttackGrid (Clicking on grid & attack grid should check enemy ship position)
+- toggle playerscreen using State design pattern
+- PlayerData class
+- implement paintComponent
+- add "STATUS" under player screen. # of own ships, # of own ships sunk, # of enemy ships sunk, current state, Game Over
+- determine result when player attack (decide where to implement this)
